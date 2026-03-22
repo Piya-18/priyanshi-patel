@@ -38,3 +38,9 @@ app.post('/api/contact', async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Replace your app.listen with this:
+if (process.env.NODE_PORT) {
+    app.listen(process.env.NODE_PORT);
+}
+
+module.exports = app;

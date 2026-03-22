@@ -13,8 +13,8 @@
     { "src": "/style.css", "dest": "/style.css" },
     { "src": "/script.js", "dest": "/script.js" },
     { "src": "/(.*)", "dest": "/index.html" },
-    { "src": "/profile.jpg", "dest": "/profile.jpg" },
-    { "src": "/(.*)", "destination": "/$1" }
+    { "src": "/me.jpg", "dest": "/me.jpg" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
   
 

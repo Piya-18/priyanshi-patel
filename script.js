@@ -33,7 +33,8 @@
                 toggleIcon.setAttribute('data-lucide', iconName);
                 lucide.createIcons();
             }
-
+            // Remove or fix this if it's in your script.js
+document.querySelector('.profile-pic').src = 'me.jpg';
             // Mouse Parallax
             const doodles = document.querySelectorAll('.doodle');
             window.addEventListener('mousemove', (e) => {
@@ -78,7 +79,7 @@ contactForm.addEventListener('submit', async (e) => {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json' 
-            },
+            },      
             body: JSON.stringify(formData)
         });
 

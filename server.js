@@ -6,8 +6,13 @@ require('dotenv').config();
 const app = express();
 const path = require('path');
 
-// This tells Express to serve ALL files in your folder (like profile.jpg)
+// This tells Express to look EXACTLY in the current folder for images
 app.use(express.static(path.join(__dirname)));
+
+// Add this specific route as a backup for the image
+app.get('/me.jpg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'me.jpg'));
+});
 
 // Middleware
 app.use(cors());

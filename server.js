@@ -5,13 +5,15 @@ require('dotenv').config();
 
 const app = express();
 const path = require('path');
+const express = require('express');
 
-// This tells Express to look EXACTLY in the current folder for images
+
+// 1. Tell Express to serve all files in the root folder as static
 app.use(express.static(path.join(__dirname)));
 
-// Add this specific route as a backup for the image
-app.get('/me.jpg', (req, res) => {
-    res.sendFile(path.join(__dirname, 'me.jpg'));
+// 2. Add an explicit rule for images if the first one fails
+app.get('/1.jpg', (req, res) => {
+    res.sendFile(path.join(__dirname, '1.jpg'));
 });
 
 // Middleware

@@ -1,40 +1,24 @@
-const cors = require('cors');
-app.use(cors()); // For development, this allows all origins
-// const express = require('express');
+const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const path = require('path');
-const express = require('express');
 
-
-// 1. Tell Express to serve all files in the root folder as static
-app.use(express.static(path.join(__dirname)));
-
-// 2. Add an explicit rule for images if the first one fails
-app.get('/1.jpg', (req, res) => {
-    res.sendFile(path.join(__dirname, '1.jpg'));
-});
-
-// Middleware
+// 1. Middleware
 app.use(cors());
-app.use(express.json()); // To parse JSON bodies from your frontend
-// This ensures 'profile.jpg' is served correctly from your root folder
-app.use(express.static(__dirname)); 
+app.use(express.json()); 
+app.use(express.static(path.join(__dirname))); // Serves your 1.jpg, style.css, etc.
 
-// Ensure you have a basic root route if not using vercel.json rewrites
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
-
-// MongoDB Atlas Connection
-mongoose.connect(process.env.MONGO_URI)
+// 2. MongoDB Atlas Connection
+// Ensure MONGODB_URI is set in Vercel Environment Variables
+const mongoURI = process.env.MONGODB_URI || process.env.MONGO_URI; 
+mongoose.connect(mongoURI)
   .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+  .catch(err => console.error("MongoDB Connection Error:", err));
 
-// Define Message Schema
+// 3. Define Message Schema
 const contactSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
@@ -44,32 +28,32 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-// POST Route for Contact Form
+// 4. POST Route for Contact Form (Matches your vercel.json)
 app.post('/api/contact', async (req, res) => {
     try {
         const { name, email, message } = req.body;
+        if (!name || !email || !message) {
+            return res.status(400).json({ success: false, error: "All fields are required" });
+        }
         const newContact = new Contact({ name, email, message });
         await newContact.save();
         res.status(201).json({ success: true, message: "Message sent successfully!" });
     } catch (error) {
+        console.error("Route Error:", error);
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-// Replace your app.listen with this:
-if (process.env.NODE_PORT) {
-    app.listen(process.env.NODE_PORT);
-}
-
-module.exports = app;
-const path = require('path');
-
-// Place these lines BEFORE your API routes
-app.use(express.static(path.join(__dirname))); 
-
-// Route to serve the main HTML file
+// 5. Route to serve the main HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+// 6. Export for Vercel (This replaces app.listen)
+module.exports = app;
+
+// Only listen if running locally
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}

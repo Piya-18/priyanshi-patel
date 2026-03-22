@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname)));
 // Middleware
 app.use(cors());
 app.use(express.json()); // To parse JSON bodies from your frontend
-// Add this above your routes
+// This ensures 'profile.jpg' is served correctly from your root folder
 app.use(express.static(__dirname)); 
 
 // Ensure you have a basic root route if not using vercel.json rewrites

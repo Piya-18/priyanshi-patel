@@ -1,4 +1,6 @@
-const express = require('express');
+const cors = require('cors');
+app.use(cors()); // For development, this allows all origins
+// const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();

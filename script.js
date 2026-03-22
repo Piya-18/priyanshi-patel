@@ -33,8 +33,7 @@
                 toggleIcon.setAttribute('data-lucide', iconName);
                 lucide.createIcons();
             }
-            // Remove or fix this if it's in your script.js
-document.querySelector('.profile-pic').src = 'me.jpg';
+
             // Mouse Parallax
             const doodles = document.querySelectorAll('.doodle');
             window.addEventListener('mousemove', (e) => {
@@ -75,7 +74,7 @@ contactForm.addEventListener('submit', async (e) => {
     console.log("Sending to Backend:", formData); // CHECK YOUR BROWSER CONSOLE (F12)
 
     try {
-        const response = await fetch('https://priyanshi-patel.vercel.app/api/contact', {
+        const response = await fetch('/api/contact', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json' 

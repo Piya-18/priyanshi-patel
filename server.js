@@ -4,6 +4,10 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const path = require('path');
+
+// This tells Express to serve ALL files in your folder (like profile.jpg)
+app.use(express.static(path.join(__dirname)));
 
 // Middleware
 app.use(cors());

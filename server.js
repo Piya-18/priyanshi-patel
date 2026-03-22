@@ -8,6 +8,13 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json()); // To parse JSON bodies from your frontend
+// Add this above your routes
+app.use(express.static(__dirname)); 
+
+// Ensure you have a basic root route if not using vercel.json rewrites
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
 
 // MongoDB Atlas Connection
 mongoose.connect(process.env.MONGO_URI)

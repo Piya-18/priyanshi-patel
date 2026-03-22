@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshi Patel | Portfolio</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="toast">Email address copied!</div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle">
+                <i data-lucide="moon" id="toggle-icon"></i>
+                <span id="toggle-text">Dark Mode</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="doodle-container">
+        <div class="doodle" style="top: 15%; left: 10%; color: var(--card-bg-wasabi);" data-factor="1.2">
+            <svg width="60" height="60" viewBox="0 0 100 100"><path d="M20,50 Q50,10 80,50 T20,50" fill="none" stroke="currentColor" stroke-width="4" /></svg>
+        </div>
+        <div class="doodle" style="top: 10%; left: 85%; color: var(--card-bg-lemon);" data-factor="0.8">
+            <svg width="80" height="80" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="10 5" /></svg>
+        </div>
+        <div class="doodle" style="top: 70%; left: 75%; color: var(--card-bg-wasabi);" data-factor="1.5">
+            <svg width="100" height="40" viewBox="0 0 100 40"><path d="M10,20 C30,5 70,35 90,20" fill="none" stroke="currentColor" stroke-width="4" /></svg>
+        </div>
+        <div class="doodle" style="top: 80%; left: 5%; color: var(--card-bg-lemon);" data-factor="0.5">
+            <svg width="50" height="50" viewBox="0 0 100 100"><path d="M50,10 L90,90 L10,90 Z" fill="none" stroke="currentColor" stroke-width="4" /></svg>
+        </div>
+    </div>
+
+    <main class="content">
+        <header class="hero" id="home">
+            <div class="profile-wrapper">
+                <div class="profile-ring">
+                    <!-- Your uploaded profile picture is correctly referenced here -->
+                    <img src="profile.jpg" alt="Priyanshi Patel" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=PP&background=a7c957&color=fff'">
+                    <div class="sparkle-icon"><i data-lucide="sparkles"></i></div>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Priyanshi <span class="accent">Patel</span></h1>
+                <p class="subtitle">Computer Science Student & Full Stack Explorer</p>
+            </div>
+        </header>
+
+        <section class="section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I am a dedicated Computer Science student currently in my <strong>2nd Semester</strong> at Kristu Jayanti (Deemed to be University). 
+                I have a deep curiosity for how the digital world works and am actively learning to build 
+                clean, efficient, and user-centric applications. My goal is to bridge the gap between 
+                complex backend logic and intuitive frontend design.
+            </p>
+        </section>
+
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="list-container">
+                <div class="list-item">
+                    <div class="list-icon"><i data-lucide="graduation-cap"></i></div>
+                    <div class="list-content">
+                        <h4>Kristu Jayanti (Deemed to be University)</h4>
+                        <p>Bachelor of Computer Science • Currently in 2nd Semester</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h2 class="section-title">Skillset</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">UI/UX Design</span>
+                <span class="skill-tag">TypeScript</span>
+            </div>
+        </section>
+
+        <section class="section" id="certification">
+            <h2 class="section-title">Certifications</h2>
+            <div class="list-container">
+                <div class="list-item">
+                    <div class="list-icon"><i data-lucide="award"></i></div>
+                    <div class="list-content">
+                        <h4>Front End Web Developer Certification</h4>
+                        <p>Infosys Springboard • Issued Feb 4, 2026</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i data-lucide="code-2"></i></div>
+                    <div class="list-content">
+                        <h4>Node JS: Advanced Concepts</h4>
+                        <p>Udemy • Issued Jan 7, 2026</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i data-lucide="github"></i></div>
+                    <div class="list-content">
+                        <h4>Git & GitHub - The Practical Guide</h4>
+                        <p>Udemy • Issued Jan 7, 2026</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon"><i data-lucide="database"></i></div>
+                    <div class="list-content">
+                        <h4>MongoDB Database Admin Path</h4>
+                        <p>MongoDB University • Issued Oct 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="project">
+            <h2 class="section-title">Academic Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800&h=400" alt="Blog System" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Blog Management System</h3>
+                            <i data-lucide="hammer"></i>
+                        </div>
+                        <p><strong>[In Progress]</strong> A full-featured platform leveraging Node.js for backend and MongoDB for storage.</p>
+                        <div class="tags"><span>Node.js</span><span>MongoDB</span><span>Express</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=800&h=400" alt="Weather System" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Weather Forecast System</h3>
+                            <i data-lucide="cloud-sun"></i>
+                        </div>
+                        <p><strong>[In Progress]</strong> A real-time tracking application fetching data from OpenWeather API.</p>
+                        <div class="tags"><span>JavaScript</span><span>REST API</span><span>Citrus Theme</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-layout" id="contact">
+            <div class="contact-info">
+                <h2 class="section-title">Let's Connect</h2>
+                <p>I'm always looking for opportunities to learn and collaborate.</p>
+                <div class="social-links">
+                    <a href="mailto:1287priyanshipatel@gmail.com" class="social-icon email-link" title="Email (Click to copy)"><i data-lucide="mail"></i></a>
+                    <a href="https://github.com/Piya-18" target="_blank" class="social-icon" title="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyanshi-patel-650743382/" target="_blank" class="social-icon" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.youtube.com/@Priya.12-07" target="_blank" class="social-icon" title="YouTube"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+    <div class="input-group">
+        <input type="text" id="userName" placeholder="Name" required>
+        <input type="email" id="userEmail" placeholder="Email" required>
+    </div>
+    <textarea id="userMessage" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Priyanshi Patel &bull; Kristu Jayanti University &bull; Continuous Learner</p>
+        </footer>
+    </main>
+
+   <script src="script.js"></script>
+
+</body>
+</html>

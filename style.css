@@ -88,25 +88,25 @@
         .hero { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; margin-bottom: 8rem; }
         @media (min-width: 768px) { .hero { flex-direction: row; } }
 
-        .profile-ring {
-            position: relative;
-            width: 180px; height: 180px; padding: 6px;
-            background: linear-gradient(to top right, var(--card-bg-wasabi), var(--card-bg-lemon));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+    .profile-pic {
+    width: 150px;           /* Set a specific width */
+    height: 150px;          /* Set a specific height */
+    object-fit: cover;      /* Prevents stretching */
+    border-radius: 50%;     /* Makes it a circle */
+    display: block;         /* Ensures it's not hidden by inline rules */
+    margin: 0 auto;         /* Centers it in the ring */
+    border: 3px solid var(--card-bg-lemon); /* Adds a nice citrus border */
+    background-color: #f5f5dc; /* Beige fallback background */
+}
 
-        .profile-pic { 
-            width: 100%; 
-            height: 100%; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            background: var(--bg-color); 
-        }
-
+.profile-ring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 170px;
+    height: 170px;
+}
         .sparkle-icon {
             position: absolute; top: 5px; right: 5px; background: var(--bg-color);
             padding: 10px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1);

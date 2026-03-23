@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -13,10 +14,19 @@ app.use(express.static(path.join(__dirname))); // Serves your 1.jpg, style.css, 
 
 // 2. MongoDB Atlas Connection
 // Ensure MONGODB_URI is set in Vercel Environment Variables
+ // This MUST be the first line
+const mongoose = require('mongoose');
+
 const uri = process.env.MONGODB_URI;
+
+if (!uri) {
+    console.error("ERROR: MONGODB_URI is not defined in .env file!");
+    process.exit(1); // Stop the server if the URI is missing
+}
+
 mongoose.connect(uri)
-  .then(() => console.log('Connected to MongoDB Atlas'))
-  .catch(err => console.error('Connection error:', err));
+    .then(() => console.log("Connected to MongoDB Atlas!"))
+    .catch(err => console.error("Could not connect to MongoDB:", err));
 
 // 3. Define Message Schema
 const contactSchema = new mongoose.Schema({

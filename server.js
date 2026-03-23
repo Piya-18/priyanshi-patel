@@ -13,10 +13,10 @@ app.use(express.static(path.join(__dirname))); // Serves your 1.jpg, style.css, 
 
 // 2. MongoDB Atlas Connection
 // Ensure MONGODB_URI is set in Vercel Environment Variables
-const mongoURI = process.env.MONGODB_URI || process.env.MONGO_URI; 
-mongoose.connect(mongoURI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.error("MongoDB Connection Error:", err));
+const uri = process.env.MONGODB_URI;
+mongoose.connect(uri)
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch(err => console.error('Connection error:', err));
 
 // 3. Define Message Schema
 const contactSchema = new mongoose.Schema({

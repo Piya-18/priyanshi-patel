@@ -1,14 +1,7 @@
  
-       // This ensures everything runs only after the HTML is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialize Icons first
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-
-    // 2. Theme Management (Put your existing theme logic here)
-    const themeToggle = document.getElementById('theme-toggle');
-    // ... rest of your theme code ...    
+        window.addEventListener('load', () => {
+            lucide.createIcons();
+            
             // Theme Management
             const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;

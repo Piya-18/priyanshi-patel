@@ -1,6 +1,6 @@
  
-        window.addEventListener('load', () => {
-            lucide.createIcons();
+    document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
             
             // Theme Management
             const themeToggle = document.getElementById('theme-toggle');

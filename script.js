@@ -114,5 +114,7 @@ contactForm.addEventListener('submit', async (e) => {
                     setTimeout(() => toast.classList.remove('show'), 3000);
                 });
             }
+            // At the bottom of script.js
+            lucide.createIcons();
         });
    

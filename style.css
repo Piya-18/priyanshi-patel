@@ -96,7 +96,7 @@
     display: block;         /* Ensures it's not hidden by inline rules */
     margin: 0 auto;         /* Centers it in the ring */
     border: 3px solid var(--card-bg-lemon); /* Adds a nice citrus border */
-    background-color: #f5f5dc; /* Beige fallback background */
+    background-color: #9fc0e0; /* Beige fallback background */
 }
 
 .profile-ring {

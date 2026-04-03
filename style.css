@@ -289,25 +289,3 @@ button:hover {
 .list-item-link:hover p {
     color: var(--text-main);
 }
-/* Makes the entire area clickable and removes blue link text */
-.list-item-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    margin-bottom: 1.25rem;
-    cursor: pointer;
-}
-
-/* Wasabi hover effect */
-.list-item-link:hover .list-item {
-    background-color: var(--card-bg-wasabi);
-    border-color: var(--text-main);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* Keeps the icon container looking sharp on hover */
-.list-item-link:hover .list-icon {
-    background-color: var(--card-bg-lemon);
-}

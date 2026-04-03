@@ -139,6 +139,19 @@
             display: flex; align-items: center; gap: 1.25rem; border: 1px solid var(--border-color);
             transition: var(--transition);
         }
+        /* Makes the entire certification card clickable without changing text style */
+        .list-item-link {
+             text-decoration: none;
+             color: inherit;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .list-item-link:hover .list-item {
+            background-color: var(--toggle-bg);
+            border-color: var(--card-bg-wasabi);
+            transform: translateY(-3px);
+        }
 
         .list-icon {
             color: var(--card-bg-wasabi); background: var(--bg-color);

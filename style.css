@@ -17,7 +17,7 @@
 
         body.dark-mode {
             /* Dark Theme */
-            --bg-color: #919c8684; 
+            --bg-color: #32323084; 
             --card-bg-wasabi: #386641; 
             --card-bg-lemon: #bc6c25; 
             --text-main: #f2e8cf; 
@@ -222,7 +222,7 @@
         #toast.show { transform: translateX(-50%) translateY(0); }
         /* Restoring the High-Contrast Citrus Button */
 button {
-    background-color: #bbd46b !important; /* The bright citrus color */
+    background-color: #65772a !important; /* The bright citrus color */
     color: #020c1b !important;            /* Dark navy text for visibility */
     border: none !important;
     padding: 1rem 2.5rem !important;
@@ -237,9 +237,9 @@ button {
 }
 
 button:hover {
-    background-color: #94944a !important; /* Shifts to Beige on hover */
+    background-color: #acac81 !important; /* Shifts to Beige on hover */
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(227, 255, 115, 0.4);
+    box-shadow: 0 8px 20px rgba(55, 61, 30, 0.4);
 }
 .footer { text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; }
 /* Step 2: Force Icon Visibility and Centering */

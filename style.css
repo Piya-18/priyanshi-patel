@@ -222,7 +222,7 @@
         #toast.show { transform: translateX(-50%) translateY(0); }
         /* Restoring the High-Contrast Citrus Button */
 button {
-    background-color: #c2e15d !important; /* The bright citrus color */
+    background-color: #7f9146 !important; /* The bright citrus color */
     color: #020c1b !important;            /* Dark navy text for visibility */
     border: none !important;
     padding: 1rem 2.5rem !important;
@@ -267,3 +267,25 @@ button:hover {
     margin-right: 8px;
 }
 
+/* Styling to make the entire card area a link */
+.list-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+
+/* Hover effect matching your portfolio theme */
+.list-item-link:hover .list-item {
+    background-color: var(--card-bg-wasabi);
+    border-color: var(--text-main);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Ensure the text stays readable on hover */
+.list-item-link:hover h4, 
+.list-item-link:hover p {
+    color: var(--text-main);
+}

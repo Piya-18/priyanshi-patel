@@ -1,7 +1,11 @@
  
-        window.addEventListener('load', () => {
-            lucide.createIcons();
-            
+       // 1. Force icons to initialize immediately
+document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+});
+
+window.addEventListener('load', () => {
+    // Keep your existing theme management here...
             // Theme Management
             const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;

@@ -3,13 +3,13 @@
 
         :root {
             /* Theme: Wasabi, Beige, Lemon Yellow */
-            --bg-color: #e8dca5e9; 
+            --bg-color: #f1e3be; 
             --card-bg-wasabi: #A7C957; 
             --card-bg-lemon: #FEE440; 
             --text-main: #386641; 
             --text-muted: #6a994e; 
             --accent-color: #bc4749; 
-            --border-color: #bae096d3;
+            --border-color: #dee2e6;
             --nav-bg: rgba(242, 232, 207, 0.85);
             --toggle-bg: #e9ecef;
             --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -17,7 +17,7 @@
 
         body.dark-mode {
             /* Dark Theme */
-            --bg-color: #32323084; 
+            --bg-color: #1a1c18; 
             --card-bg-wasabi: #386641; 
             --card-bg-lemon: #bc6c25; 
             --text-main: #f2e8cf; 
@@ -171,7 +171,7 @@
         /* Projects */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .project-card {
-            background: rgba(215, 212, 38, 0.36); border-radius: 32px; overflow: hidden; border: 1px solid var(--border-color);
+            background: white; border-radius: 32px; overflow: hidden; border: 1px solid var(--border-color);
             transition: var(--transition); display: flex; flex-direction: column;
         }
         .project-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); border-color: var(--card-bg-wasabi); }
@@ -222,7 +222,7 @@
         #toast.show { transform: translateX(-50%) translateY(0); }
         /* Restoring the High-Contrast Citrus Button */
 button {
-    background-color: #65772a !important; /* The bright citrus color */
+    background-color: #c2e15d !important; /* The bright citrus color */
     color: #020c1b !important;            /* Dark navy text for visibility */
     border: none !important;
     padding: 1rem 2.5rem !important;
@@ -237,9 +237,9 @@ button {
 }
 
 button:hover {
-    background-color: #acac81 !important; /* Shifts to Beige on hover */
+    background-color: #f5f5dc !important; /* Shifts to Beige on hover */
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(55, 61, 30, 0.4);
+    box-shadow: 0 8px 20px rgba(227, 255, 115, 0.4);
 }
 .footer { text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; }
 /* Step 2: Force Icon Visibility and Centering */

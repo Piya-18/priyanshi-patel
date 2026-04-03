@@ -266,3 +266,26 @@ button:hover {
 #toggle-icon {
     margin-right: 8px;
 }
+ 
+/* Styling to make the entire card area a link */
+.list-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+
+/* Hover effect matching your portfolio theme */
+.list-item-link:hover .list-item {
+    background-color: var(--card-bg-wasabi);
+    border-color: var(--text-main);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Ensure the text stays readable on hover */
+.list-item-link:hover h4, 
+.list-item-link:hover p {
+    color: var(--text-main);
+}

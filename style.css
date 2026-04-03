@@ -3,12 +3,12 @@
 
         :root {
             /* Theme: Wasabi, Beige, Lemon Yellow */
-            --bg-color: #e7b660; 
-            --card-bg-wasabi: #A7C957; 
-            --card-bg-lemon: #FEE440; 
-            --text-main: #386641; 
-            --text-muted: #6a994e; 
-            --accent-color: #bc4749; 
+            --bg-color: #384872; 
+            --card-bg-wasabi: #bac4f8; 
+            --card-bg-lemon: #b2f5f2; 
+            --text-main: #4e5d5f; 
+            --text-muted: #4b6a89; 
+            --accent-color: #6389ab; 
             --border-color: #dee2e6;
             --nav-bg: rgba(242, 232, 207, 0.85);
             --toggle-bg: #e9ecef;
@@ -18,11 +18,11 @@
         body.dark-mode {
             /* Dark Theme */
             --bg-color: #1a1c18; 
-            --card-bg-wasabi: #386641; 
-            --card-bg-lemon: #bc6c25; 
-            --text-main: #f2e8cf; 
+            --card-bg-wasabi: #546b6d; 
+            --card-bg-lemon: #86cdca; 
+            --text-main: #cff2f0; 
             --text-muted: #a2ad91; 
-            --border-color: #2b2d24;
+            --border-color: #647781;
             --nav-bg: rgba(26, 28, 24, 0.85);
             --toggle-bg: #2b2d24;
         }
@@ -96,7 +96,7 @@
     display: block;         /* Ensures it's not hidden by inline rules */
     margin: 0 auto;         /* Centers it in the ring */
     border: 3px solid var(--card-bg-lemon); /* Adds a nice citrus border */
-    background-color: #e0d49f; /* Beige fallback background */
+    background-color: #000000; /* Beige fallback background */
 }
 
 .profile-ring {
@@ -222,7 +222,7 @@
         #toast.show { transform: translateX(-50%) translateY(0); }
         /* Restoring the High-Contrast Citrus Button */
 button {
-    background-color: #d5c916 !important; /* The bright citrus color */
+    background-color: #94dfe3 !important; /* The bright citrus color */
     color: #020c1b !important;            /* Dark navy text for visibility */
     border: none !important;
     padding: 1rem 2.5rem !important;
@@ -237,7 +237,7 @@ button {
 }
 
 button:hover {
-    background-color: #f5f5dc !important; /* Shifts to Beige on hover */
+    background-color: #0f1846 !important; /* Shifts to Beige on hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(227, 255, 115, 0.4);
 }

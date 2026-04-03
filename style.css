@@ -223,4 +223,18 @@ button:hover {
 }
 
         .footer { text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; }
+
+/* Force icons to be visible and correctly colored */
+[data-lucide] {
+    width: 24px !important;
+    height: 24px !important;
+    stroke: currentColor; /* Inherits the color from the parent link */
+    stroke-width: 2;
+    display: inline-block;
+}
+
+.social-icon i {
+    /* Ensures the icon stays centered in your 52px circles */
+    margin: auto;
+}
    

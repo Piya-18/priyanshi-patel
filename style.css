@@ -10,7 +10,7 @@
             --text-muted: #6a994e; 
             --accent-color: #bc4749; 
             --border-color: #dee2e6;
-            --nav-bg: rgba(242, 232, 207, 0.85);
+            --nav-bg: rgba(121, 146, 92, 0.85);
             --toggle-bg: #e9ecef;
             --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }

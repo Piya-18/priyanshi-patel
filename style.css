@@ -153,6 +153,13 @@
             transform: translateY(-3px);
         }
 
+        .list-item-link {
+    position: relative;
+    z-index: 5; /* Ensures the link is "on top" of other elements */
+    cursor: pointer;
+    display: block;
+}
+
         .list-icon {
             color: var(--card-bg-wasabi); background: var(--bg-color);
             padding: 10px; border-radius: 12px; display: flex; align-items: center; justify-content: center;

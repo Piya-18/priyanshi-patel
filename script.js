@@ -1,11 +1,14 @@
- 
-       // 1. Force icons to initialize immediately
+ // 1. Initialize icons as soon as the HTML text is ready
 document.addEventListener('DOMContentLoaded', () => {
-    lucide.createIcons();
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
 
+// 2. Keep your existing window load logic for the rest
 window.addEventListener('load', () => {
-    // Keep your existing theme management here...
+    // Re-run once more just to be safe
+    lucide.createIcons();
             // Theme Management
             const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;

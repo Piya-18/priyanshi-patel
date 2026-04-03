@@ -3,7 +3,7 @@
 
         :root {
             /* Theme: Wasabi, Beige, Lemon Yellow */
-            --bg-color: #f1e3be; 
+            --bg-color: #5ed3b8; 
             --card-bg-wasabi: #A7C957; 
             --card-bg-lemon: #FEE440; 
             --text-main: #386641; 
@@ -96,7 +96,7 @@
     display: block;         /* Ensures it's not hidden by inline rules */
     margin: 0 auto;         /* Centers it in the ring */
     border: 3px solid var(--card-bg-lemon); /* Adds a nice citrus border */
-    background-color: #9fc0e0; /* Beige fallback background */
+    background-color: #e0d49f; /* Beige fallback background */
 }
 
 .profile-ring {
